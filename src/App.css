@@ -1,30 +1,309 @@
+/* Homepage section */
+
 .homepage{
     position: absolute;
     top: 50%; right: 50%;
     transform: translate(50%,-50%);
 }
-.homepage_title{
+.homepage__title{
     color: white;
     text-align: center;
     margin: 2rem 0;
     font-size: 1.5rem;
 }
-.homepage_profilpic{
+.homepage__profilpic{
     width: 225px;
     height: 225px;
     border-radius: 50%;
     margin: 0 auto;
     background-image: url("./img/profilpic.jpg");
 }
-.homepage_navlink{
+.homepage__navlink{
     list-style-type: none;
     padding: 0;
     text-align: center;
 }
-.homepage_navlink, a{
+.homepage__navlink, a{
     text-decoration: none;
     color: white;
 }
-.homepage_navlink, li{
+.homepage__navlink, li{
     margin: 1rem 0;
+}
+/* About section */
+.about__presentation--box{
+    font-size: 0.9rem;
+    color: white;
+    text-align: justify;
+    position: absolute;
+    top: 50%; right: 50%;
+    transform: translate(50%,-50%);
+    width: 80%;
+}
+.about__presentation--paragraphe2{
+    margin-top: 1.5rem;
+}
+
+/* Experience section */
+
+.experience__box{
+    text-align: left;
+    color: white;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+}
+.experience__title{
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 5%;
+    font-weight: bold;
+}
+.experience__list{
+    margin: 0;
+}
+/* .experience__list, p{
+    margin-top: 0;
+    margin-bottom: 5%;
+} */
+.list__title{
+    font-weight: 700;
+    margin: 1px;
+    font-size: 1rem;
+    color: rgb(163, 223, 180);
+}
+
+/* Projects section */
+
+.project__box{
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 50%;
+}
+
+.project__title{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+/* Skills section */
+
+.skill__title{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.skill__box{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.skill__box--quote{
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+}
+.skill__box--logo{
+    width: 10rem;
+    text-align: center;
+    margin: 3%;
+}
+
+/* Contact section */
+
+.contact__title{
+    text-align: center;
+    font-size: 1.5rem;
+    /* font-weight: bold; */
+}
+.contact__logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact__infos{
+    text-align: center;
+}
+.contact__infos--logo{
+    display: ruby;
+}
+.contact__infos--logo p{
+    color: white;
+}
+.contact__infos--link{
+    text-decoration: none;
+    color: white;
+}
+hr{
+    background-color: white;
+}
+
+.contact__form{
+    display: flex;
+    justify-content: center;
+}
+label{
+    color: white;
+}
+input{
+    padding: 10px;
+    border-radius: 20px;
+    font-style: italic;
+}
+textarea{
+    resize: none;
+    border-radius: 20px;
+}
+.contact__form--box{
+    margin-top: 20%;
+}
+.contact__form--content{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10%;
+}
+.contact__form--button{
+    margin: 15px;
+    border-radius: 10px;
+    background-color: #468070;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 1px 1px 2px white;
+    font-weight: 700;
+    transition-duration: 500ms;
+}
+.contact__form--button:hover{
+    background-color: white;
+    color: #468070;
+}
+.contact__form--button:hover{
+    scale: (0.9);
+}
+
+/* card */
+:root{
+    --primary: #e9f5eb;
+    --secondary: #295430;
+    --dark: #212121;
+    --ligth_dark: #808080;
+    --light: #f3f3f3;
+    --test: #326453;
+    --test2: rgb(163, 223, 180);
+    --gitLink: #92b374;
+}
+.card{
+    /* margin-right: 30px; */
+    width: 220px;
+    height: 220px;
+}
+.card__inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+}
+.is-flipped{
+    transform: rotateY(180deg);
+}
+.card__face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.35);
+}
+.card__face--front{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card__face--front h2{
+    color: white;
+    font-size: 2rem;
+}
+.card__face--back{
+    background: var(--test2);
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--test);
+    text-align: center;
+}
+.card__content{
+    width: 100%;
+    height: 100%;
+}
+.scrolling-wrapper{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    height: 250px;
+    padding: 1rem;
+}
+.scrolling-wrapper > .card{
+    flex: 0 0 auto;
+    margin-right: 20px;
+}
+.linkSite{
+    background-color: var(--test);
+    padding: 5px;
+    border-radius: 20px;
+}
+.linkGithub{
+    background-color: var(--gitLink);
+    padding: 5px;
+    border-radius: 20px;
+}
+
+/* bg-img */
+.showtrack{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./img/showtrack.png) center no-repeat;
+    background-size: cover;
+}
+.wordpress{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./img/wordpress.png) center no-repeat;
+    background-size: cover;
+}
+.portfolio{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./img/cv-portfolio.png) center no-repeat;
+    background-size: cover;
+}
+.weather-app{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./img/weather-app.png) center no-repeat;
+    background-size: cover;
+}
+.calculator{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./img/calculator.png) center no-repeat;
+    background-size: cover;
+}
+.todo-list{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./img/todo-list.png) center no-repeat;
+    background-size: cover;
+}
+.quote-generator{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./img/chuck-Norris.png) center no-repeat;
+    background-size: cover;
+}
+
+@media screen and (min-width: 685px){
+    .about__presentation--box{
+        font-size: 1.1rem;
+        transform: translate(50%,-30%);
+        width: 40%
+    }
+    .experience__box{
+        margin-top: 1rem;
+    }
+    .project__box{
+        margin-top: 12rem;
+    }
 }

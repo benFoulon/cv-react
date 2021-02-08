@@ -4,14 +4,14 @@ import {Link} from 'react-router-dom'
 export default function Home() {
     return (
         <div className="homepage">
-            <div className="homepage_title">
+            <div className="homepage__title">
                 <p>Benjamin Foulon</p>
                 <p>Développeur web et mobile</p>
             </div>
             {/* photo de profil */}
-            <div className="homepage_profilpic"></div>
+            <div className="homepage__profilpic"></div>
             
-            <ul className="homepage_navlink">
+            <ul className="homepage__navlink">
                 <li><Link to="/about">A propos</Link></li>
                 <li><Link to="/experience">Expérience</Link></li>
                 <li><Link to="/project">Projets</Link></li>

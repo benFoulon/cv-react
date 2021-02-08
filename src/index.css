@@ -1,14 +1,25 @@
 body {
   margin: 0;
-  background-color: #468070;
+  background-color: #326453;
+  height: 100vh;
 }
-h2{
+h2, h1{
+  font-family: 'Libre Baskerville', serif;
   color: white;
   text-align: center;
   margin-top: 0;
 }
-.fas{
+.fas, .far{
   color: #abd1bf;
   display: inline-block;
   margin: 0.8rem;
+}
+.fab, .fa-envelope-square{
+  color: #abd1bf;
+  display: inline-block;
+  margin: 0.6rem;
+}
+.containeur{
+  width: 75%;
+  margin: 0 auto;
 }
